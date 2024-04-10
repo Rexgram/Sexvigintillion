@@ -5,66 +5,6 @@ button_art = (".=-::::::::::::::::::::::::::::::::::::-+.\n"+
               ".#                                      %.\n"+
               ".=-::::::::::::::::::::::::::::::::::::-+.")
 
-zero = ("000000\n"+
-        "00  00\n"+
-        "00  00\n"+
-        "00  00\n"+
-        "000000\n")
-
-one = ("1111\n"+
-       "  11\n"+
-       "  11\n"+
-       "  11\n"+
-       "111111")
-
-two = ("222222\n"+
-       "     2\n"+
-       "222222\n"+
-       "2\n"+
-       "222222")
-
-three = ("333333\n"+
-         "    33\n"+
-         "333333\n"+
-         "    33\n"+
-         "333333")
-
-four = ("44  44\n"+
-        "44  44\n"+
-        "444444\n"+
-        "    44\n"+
-        "    44")
-
-five = ("555555\n"+
-        "55\n"+
-        "555555\n"+
-        "    55\n"+
-        "555555\n")
-
-six = ("666666\n"+
-       "66\n"+
-       "666666\n"+
-       "66  66\n"+
-       "666666")
-
-seven = ("777777\n"+
-         "    77\n"+
-         "    77\n"+
-         "    77\n"+
-         "    77")
-
-eight = ("888888\n"+
-         "88  88\n"+
-         "888888\n"+
-         "88  88\n"+
-         "888888")
-
-nine = ("999999\n"+
-        "99  99\n"+
-        "999999\n"+
-        "    99\n"+
-        "999999")
-
 def print_number(x):
     zero = '''
      000  
@@ -154,6 +94,13 @@ def print_number(x):
             print(digits[ones_digit])
     else:
         print("Number out of range.")
+        
+from threading import Thread
+from time import sleep
 
-# Example usage
-print_number(25)  # Prints ASCII art representation of the number 25
+number = 0
+     
+while True:
+        number += 1
+        sleep(0.5)
+        print(print_number(number))
